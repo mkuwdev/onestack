@@ -3,7 +3,15 @@ import '../styles/globals.css'
 import { providers } from "ethers";
 import { Connector, Provider, chain, defaultChains } from "wagmi";
 import { InjectedConnector } from "wagmi/connectors/injected";
-import { INFURA_ID } from '../constants'
+import { INFURA_ID } from '../constants';
+import { ApolloProvider} from '@apollo/client';
+import { apolloClient } from "../lib/apollo-client";
+import { ExampleQuery } from '../examples/ping';
+import { ExampleText } from '../examples/text';
+import { ExampleAuthenticate } from '../examples/authentication';
+
+
+
 
 import Layout from '../components/Layout'
 
@@ -36,6 +44,7 @@ const provider = ({ chainId }) => new providers.InfuraProvider(chainId, INFURA_I
 
 function MyApp({ Component, pageProps }) {
   return (
+    <ApolloProvider client={apolloClient}>
     <Provider
       autoConnect
       connectors={connectors}
@@ -43,8 +52,12 @@ function MyApp({ Component, pageProps }) {
     >
       <Layout>
         <Component {...pageProps} />
+        <ExampleQuery/>
+        <ExampleText/>
+        <ExampleAuthenticate/>
       </Layout>
     </Provider>
+    </ApolloProvider>
   )
 }
 
