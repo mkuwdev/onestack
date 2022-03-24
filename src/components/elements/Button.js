@@ -12,7 +12,7 @@ export const Button = ({
   children,
 }) => {
   const btnBase =
-    "rounded-xl border border-black shadow-md hover:shadow-xl hover:bg-stone-100";
+    "rounded-xl border shadow-md font-mono hover:bg-stone-100";
 
   if (disabled)
     return (

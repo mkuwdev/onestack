@@ -5,6 +5,8 @@ import { Connector, Provider, chain, defaultChains } from "wagmi";
 import { InjectedConnector } from "wagmi/connectors/injected";
 import { INFURA_ID } from '../constants'
 
+import Layout from '../components/Layout'
+
 const chains = [chain.polygonTestnetMumbai];
 const defaultChain = chain.mainnet;
 
@@ -39,7 +41,9 @@ function MyApp({ Component, pageProps }) {
       connectors={connectors}
       provider={provider}
     >
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </Provider>
   )
 }

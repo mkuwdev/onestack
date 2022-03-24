@@ -23,7 +23,7 @@ export const SwitchNetwork = () => {
         className="text-xs border-none text-red-600 shadow-sm"
         onClick={() => handleSwitch()}
       >
-        change to network {config.network.id}
+        Switch to Mumbai
       </Button>
     </div>
   );

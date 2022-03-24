@@ -9,15 +9,15 @@ export default function Home() {
         <meta name="description" content="Made with love 💘" />
         <link rel="icon" href="/logo.png" />
       </Head>
-      <div className="m-4 flex justify-between">
+      {/* <div className="m-4 flex justify-between">
         <div></div>
         <div className="flex space-between">
           <SwitchNetwork />
           <ConnectWallet />
         </div>
-      </div>
+      </div> */}
       <h1 className="text-3xl font-bold">
-        The start to many things to come..
+        The start of many things to come..
       </h1>
     </div>
   )
