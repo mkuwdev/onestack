@@ -9,7 +9,7 @@
 
 2. Go to the directory
 ```
-   cd CUtopia
+   cd onestack
 ```
 
 3. Install all dependencies
