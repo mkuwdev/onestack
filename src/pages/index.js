@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Publication from './post'
 import { ConnectWallet, SwitchNetwork } from "../components/wallet";
 
 export default function Home() {
@@ -17,8 +18,9 @@ export default function Home() {
         </div>
       </div> */}
       <h1 className="text-3xl font-bold">
-        Landing Page
+       
       </h1>
+      <Publication />
     </div>
   )
 }
