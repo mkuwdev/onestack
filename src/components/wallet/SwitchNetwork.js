@@ -18,9 +18,9 @@ export const SwitchNetwork = () => {
   if (networkData.chain?.id === config.network.id) return null;
 
   return (
-    <div>
+    <div className="align-middle py-2">
       <Button
-        className="text-xs border-none text-red-600 shadow-sm"
+        className="text-xs border-none text-red-600 shadow-none hover:bg-white"
         onClick={() => handleSwitch()}
       >
         Switch to Mumbai

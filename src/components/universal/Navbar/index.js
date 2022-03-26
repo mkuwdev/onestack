@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useContext } from 'react'
 
-import Menu from './Menu'
 import Search from './Search'
 
 import { ConnectWallet, SwitchNetwork } from "../../wallet";
@@ -33,14 +32,14 @@ const Navbar = () => {
     return (
       <>
         <NavItem 
-          url="/home" 
-          name="Home" 
-          current={router.pathname == '/home'} 
+          url="/explore" 
+          name="Explore" 
+          current={router.pathname == '/explore'} 
         />
         <NavItem
-          url="/explore"
-          name="Explore"
-          current={router.pathname == '/explore'}
+          url="/about"
+          name="About"
+          current={router.pathname == '/about'}
         />
       </>
     )
@@ -75,7 +74,7 @@ const Navbar = () => {
             </div> */}
             <div className="m-4 flex justify-between">
               <div></div>
-              <div className="flex space-between">
+              <div className="flex space-between align-bottom">
                 <SwitchNetwork />
                 <ConnectWallet />
               </div>

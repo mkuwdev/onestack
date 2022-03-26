@@ -1,6 +1,5 @@
 // TODO
 import { useRef, useState } from 'react'
-import { Input } from '../../ui/Input'
 
 const Search = () => {
 

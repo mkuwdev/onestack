@@ -1,7 +1,8 @@
+import React from 'react'
 import Head from 'next/head'
-import { ConnectWallet, SwitchNetwork } from "../components/wallet";
 
-export default function Home() {
+
+const home = () => {
   return (
     <div>
       <Head>
@@ -9,16 +10,11 @@ export default function Home() {
         <meta name="description" content="Made with love 💘" />
         <link rel="icon" href="/logo.png" />
       </Head>
-      {/* <div className="m-4 flex justify-between">
-        <div></div>
-        <div className="flex space-between">
-          <SwitchNetwork />
-          <ConnectWallet />
-        </div>
-      </div> */}
       <h1 className="text-3xl font-bold">
         Landing Page
       </h1>
     </div>
   )
 }
+
+export default home
