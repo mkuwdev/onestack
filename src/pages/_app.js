@@ -3,6 +3,8 @@ import '../styles/globals.css'
 import { providers } from "ethers";
 import { Connector, Provider, chain, defaultChains } from "wagmi";
 import { InjectedConnector } from "wagmi/connectors/injected";
+import { ApolloProvider} from '@apollo/client';
+import { apolloClient } from "../lib/apollo-client";
 import { INFURA_ID } from '../constants'
 
 import Layout from '../components/Layout'
@@ -36,6 +38,7 @@ const provider = ({ chainId }) => new providers.InfuraProvider(chainId, INFURA_I
 
 function MyApp({ Component, pageProps }) {
   return (
+    <ApolloProvider client={apolloClient}>
     <Provider
       autoConnect
       connectors={connectors}
@@ -43,9 +46,12 @@ function MyApp({ Component, pageProps }) {
     >
       <Layout>
         <Component {...pageProps} />
+
       </Layout>
     </Provider>
+    </ApolloProvider>
   )
 }
+  
 
 export default MyApp
