@@ -17,7 +17,8 @@ export default function Home() {
           <ConnectWallet />
         </div>
       </div> */}
-      <Publication />
+      {/* <Publication /> */}
+      <div className="text-xl font-mono font-bold">Landing Page</div>
     </div>
   )
 }

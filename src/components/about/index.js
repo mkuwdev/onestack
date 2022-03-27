@@ -45,7 +45,7 @@ const home = () => {
   // }
     // const signature = signText(challengeResponse.data.challenge.text)
 
-    login();
+    // login();
 
   return (
     <div>
@@ -54,7 +54,7 @@ const home = () => {
         <meta name="description" content="Made with love 💘" />
         <link rel="icon" href="/logo.png" />
       </Head>
-      <h1>hello</h1>
+      <div className="text-xl font-mono font-bold">Landing Page</div>
     </div>
   )
 }
