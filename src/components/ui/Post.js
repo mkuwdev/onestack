@@ -11,24 +11,24 @@ const Post = ({ post }) => {
           <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 rounded-full">
-                  <Jdenticon value={post.address} />
+                  <Jdenticon value={post.profile.ownedBy} />
                 </div>
                 <div>
                   <div className="flex text-sm items-center gap-1 font-bold font-mono">
-                    <div>{post.name}</div>
+                    <div>{post.profile.handle}</div>
                   </div>
                   <div className="flex items-center gap-1 text-sm overflow-hidden text-ellipsis w-20 font-mono">
-                    <div className="truncate">{post.address}</div>
+                    <div className="truncate">{post.profile.ownedBy}</div>
                   </div>
                 </div>
               </div>
           </div>
           <div className="mt-2">
             <div className="font-bold text-2xl">
-              {post.title}
+              {post.metadata.content}
             </div>
             <div className="text-md">
-              {post.content}
+              {post.metadata.description}
             </div>
           </div>
         </CardBody>

@@ -9,10 +9,20 @@ import { EXPLORE_PUBLICATIONS } from "./api/publication";
     variables: {
       request: {
         sortCriteria: "TOP_COMMENTED",
+        sources: ["onestacktest3"],
         limit: 20,
-      },
+        },
     },
   });
+
+  // const data = getPublications(
+  //   {
+  //      // you can filter the publication types along side it
+  //     "publicationTypes": ["POST", "COMMENT", "MIRROR"]
+  //     // also dont forget you can filter these queries on sources as well
+  //     // "sources": ["lost-place-dapp"]
+  //  }
+  // )
 
   console.log(data);
   return (
@@ -23,6 +33,9 @@ import { EXPLORE_PUBLICATIONS } from "./api/publication";
       >
         Top 20 Commented Publications
       </h1>
+      {loading && (
+        <h1>Loading</h1>
+      )}
       {isOpen && data && (
         <>
           {data.explorePublications.items.map((item, index) => (
@@ -37,6 +50,7 @@ import { EXPLORE_PUBLICATIONS } from "./api/publication";
                 <div className="font-semibold">
                   Username : {item.profile.handle}
                 </div>
+                <div>AppId : {item.appId}</div>
                 <div>Collects : {item.profile.stats.totalCollects}</div>
                 <div>Comments : {item.profile.stats.totalComments}</div>
                 <div>Followers : {item.profile.stats.totalFollowers}</div>
