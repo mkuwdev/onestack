@@ -22,15 +22,6 @@ const connectors = ({ chainId }) => {
       chains: chains,
       options: { shimDisconnect: true }
     }),
-    // new WalletConnectConnector({
-    //   options: { infuraId: INFURA_ID, chainId: chain.polygonTestnetMumbai.id }
-    // }),
-    // new WalletLinkConnector({
-    //   options: {
-    //     appName: 'Lenster',
-    //     jsonRpcUrl: `${rpcUrl}/${INFURA_ID}`
-    //   }
-    // })
   ]
 }
 
